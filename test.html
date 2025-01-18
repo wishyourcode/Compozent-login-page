@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>figma test design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "League Spartan", serif;
+      }
+
+      #left {
+        width: 50%;
+        background-color: white;
+        height: 100vh;
+        padding: 150px;
+        z-index: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #right {
+        width: 50%;
+        background-color: green;
+        height: 100vh;
+      }
+
+      #parent {
+        display: flex;
+      }
+
+      #header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      #title {
+        margin-top: 20px;
+      }
+
+      #title > h1 {
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      #title > p {
+        text-align: center;
+      }
+
+      #google-login-button {
+        border: 2px solid #1e1e1e91;
+        border-radius: 8px;
+        background-color: white;
+        padding: 10px;
+        text-align: center;
+        margin-top: 30px;
+        max-width: 300px;
+        width: 100%;
+
+        cursor: pointer;
+        transition: 0.5s;
+      }
+
+      #google-login-button:hover {
+        /* background-color: #ad3838; */
+        transform: scale(1.05);
+        box-shadow: 5px 4px 2px 0px #0000ff2b;
+      }
+
+      #title,
+      #header {
+        width: 100%;
+      }
+
+      #seperator {
+        width: 60%;
+        text-align: center;
+        margin-top: 17px;
+        position: relative;
+      }
+
+      #seperator::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: rgb(75, 75, 231);
+        position: absolute;
+        height: 1px;
+        top: 50%;
+        left: 0px;
+        z-index: -1;
+      }
+
+      #seperator > span {
+        background: rgb(238, 238, 238);
+        padding: 10px;
+      }
+
+      .input_box {
+        margin-top: 40px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        position: relative;
+      }
+
+      .input_box > input {
+        all: unset;
+      }
+
+      .email::before,
+      .password::before {
+        content: "Your Email";
+        height: 100%;
+        /* width: 100%; */
+        padding-right: 7px;
+        padding-left: 7px;
+        background-color: #ffffff;
+        position: absolute;
+        /* height: 1px; */
+        top: 50%;
+        top: -5px;
+        left: 10px;
+        font-size: 10px;
+      }
+
+      .password::before {
+        content: "Your Password";
+      }
+
+      .forgot-password {
+        font-size: 12px;
+        text-align: right;
+        color: #0066cc;
+        margin-bottom: 20px;
+        text-decoration: none;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .login-btn {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .signup-text {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .signup-text a {
+        color: #0066cc;
+        text-decoration: none;
+      }
+
+      #right {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXIcDZJajfVmleMLFTNUKkQE55ktXPRaZXFg&s);
+        background-position: center;
+        position: relative;
+        /* height: 100px; */
+        width: 1000px;
+        background-size: cover;
+      }
+
+      .image-overlay {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: #fff;
+        font-size: 22px;
+        line-height: 1.5;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="parent">
+      <div id="left">
+        <div id="header">
+          <div>Logo</div>
+          <div>buttons</div>
+        </div>
+        <div id="title">
+          <h1>hi there!</h1>
+          <p>Welcome, Community Dashboard</p>
+        </div>
+        <div id="google-login-button">Log in with google</div>
+        <div id="seperator">
+          <span>or</span>
+        </div>
+        <div class="input_box email">
+          <input type="email" />
+        </div>
+        <div class="input_box password">
+          <input type=" Your password" />
+        </div>
+        <div>
+          <a href="#" class="forgot-password">Forgot password?</a>
+          <div class="button-container">
+            <button type="submit" class="login-btn">Log in</button><br />
+          </div>
+          <div>
+            <p class="signup-text">
+              Don't have an account? <a href="#">Sign up</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="right">
+        <div class="image-overlay">
+          <h2>“Go wherever you want<br />space is full of wonders!”</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
